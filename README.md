@@ -1,7 +1,5 @@
 # Swag
 
-[![NPM](https://nodei.co/npm/swag.png?downloads=true&stars=true)](https://nodei.co/npm/swag/)
-
 Swag is a growing collection of helpers for [Handlebars.js](https://github.com/wycats/handlebars.js/). This fork is maintained by [Spike.sh engineering](https://spike.sh). If you are a user of Spike.sh then please refer to the below helpers you can use in Title remapper.
 
 
