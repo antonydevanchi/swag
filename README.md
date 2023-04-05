@@ -2,28 +2,110 @@
 
 Swag is a growing collection of helpers for [Handlebars.js](https://github.com/wycats/handlebars.js/). This fork is maintained by [Spike.sh engineering](https://spike.sh). If you are a user of Spike.sh then please refer to the below helpers you can use in Title remapper.
 
+### Swag TOC
+
+- [Swag](#swag)
+    - [Swag TOC](#swag-toc)
+  - [Context](#context)
+  - [Strings](#strings)
+      - [lowercase](#lowercase)
+      - [uppercase](#uppercase)
+      - [capitalizeFirst](#capitalizefirst)
+      - [capitalizeEach](#capitalizeeach)
+      - [titleize](#titleize)
+      - [sentence](#sentence)
+      - [reverse](#reverse)
+      - [truncate](#truncate)
+      - [center](#center)
+      - [newLineToBr](#newlinetobr)
+      - [sanitize](#sanitize)
+  - [Collections](#collections)
+      - [first](#first)
+      - [withFirst](#withfirst)
+      - [last](#last)
+      - [withLast](#withlast)
+      - [after](#after)
+      - [withAfter](#withafter)
+      - [before](#before)
+      - [withBefore](#withbefore)
+      - [join](#join)
+      - [sort](#sort)
+      - [withSort](#withsort)
+      - [length](#length)
+      - [lengthEqual](#lengthequal)
+    - [empty](#empty)
+    - [any](#any)
+    - [inArray](#inarray)
+    - [eachIndex](#eachindex)
+    - [eachProperty](#eachproperty)
+  - [Math](#math)
+      - [add](#add)
+      - [subtract](#subtract)
+      - [divide](#divide)
+      - [multiply](#multiply)
+      - [floor](#floor)
+      - [ceil](#ceil)
+      - [round](#round)
+  - [Numbers](#numbers)
+      - [toFixed](#tofixed)
+      - [toPrecision](#toprecision)
+      - [toExponential](#toexponential)
+      - [toInt](#toint)
+      - [toFloat](#tofloat)
+      - [digitGrouping](#digitgrouping)
+      - [](#)
+  - [Comparisons](#comparisons)
+      - [is](#is)
+      - [isnt](#isnt)
+      - [gt](#gt)
+      - [gte](#gte)
+      - [lt](#lt)
+      - [lte](#lte)
+      - [or](#or)
+      - [and](#and)
+  - [Dates](#dates)
+      - [formatDate](#formatdate)
+      - [now](#now)
+      - [timeago](#timeago)
+  - [Inflections](#inflections)
+      - [inflect](#inflect)
+      - [ordinalize](#ordinalize)
+  - [HTML](#html)
+      - [ul](#ul)
+      - [ol](#ol)
+      - [br](#br)
+  - [Logging](#logging)
+      - [log](#log)
+      - [debug](#debug)
+  - [Miscellaneous](#miscellaneous)
+      - [default](#default)
+      - [partial](#partial)
 
 ## Context
 If you have functions in your template's context, Swag will execute the function and use the returned value inside the helper:
 
-    context = {
-        firstName: function() { return 'elving'; }
-        lastName: 'Rodríguez'
-    };
+```handlebars
+context = {
+    firstName: function() { return 'elving'; }
+    lastName: 'Rodríguez'
+};
 
-    {{uppercase firstName}} {{lowercase lastName}}
+{{uppercase firstName}} {{lowercase lastName}}
 
-    ELVING rodríguez
+ELVING rodríguez
+```
 
 If you pass a string to a Number, Math or any helper that needs a number to work, Swag will try to convert it to a number and use it:
 
-    context = {
-        age: '24'
-    };
+```handlebars
+context = {
+    age: '24'
+};
 
-    {{add age '1'}}
+{{add age '1'}}
 
-    25
+25
+```
 
 ## Strings
 
@@ -35,9 +117,11 @@ Parameters: none.
 
 Usage:
 
-    {{lowercase "BENDER SHOULD NOT BE ALLOWED ON TV"}}
+```handlebars
+{{lowercase "BENDER SHOULD NOT BE ALLOWED ON TV"}}
 
-    bender should not be allowed on tv
+bender should not be allowed on tv
+```
 
 #### uppercase
 
@@ -47,9 +131,11 @@ Parameters: none.
 
 Usage:
 
-    {{uppercase "bender should not be allowed on tv"}}
+```handlebars
+{{uppercase "bender should not be allowed on tv"}}
 
-    BENDER SHOULD NOT BE ALLOWED ON TV
+BENDER SHO
+```ULD NOT BE ALLOWED ON TV
 
 #### capitalizeFirst
 
